@@ -10,7 +10,7 @@ class Payments extends Component{
                 name="Send Email"
                 description="$5 for 5 email credits"
                 amount={500}
-                token={this.props.handleToken()}
+                token={token => console.log(token)}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
             />
         );
@@ -18,4 +18,4 @@ class Payments extends Component{
 }
 
 
-export default connect(null,actions)(Payments);
+export default Payments;
